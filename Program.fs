@@ -69,6 +69,7 @@ let main argv =
         .UseContentRoot(contentRoot)
         .UseIISIntegration()
         .UseWebRoot(webRoot)
+        .UseUrls("http://*:5000")
         .Configure(Action<IApplicationBuilder> configureApp)
         .ConfigureServices(configureServices)
         .ConfigureLogging(configureLogging)
