@@ -18,3 +18,14 @@ This isn't really intended for production, but if you wish to deploy this somewh
 1. Use `dotnet publish -o app -c release`.  This will copy a release version of the app into a new folder called `/app`, along with every other .dll dependency this app requires.
 2. Put the contents of `/app` wherever you like.
 3. Run it from there.
+
+
+## Docker
+
+For a Docker deployment; build and run the image with the following steps:
+
+*Requires Docker for your desired OS*
+
+1. `docker build -t giraffesample .`
+2. `docker run -d -p 5000:5000 giraffesample`
+3. Browse to http://localhost:5000/lunch or use Postman and hit the endpoints. Now the application is will be running inside a Docker container.
