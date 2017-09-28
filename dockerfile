@@ -14,7 +14,5 @@ FROM microsoft/dotnet:runtime
 
 LABEL Name=fsharpdocker Version=0.0.1
 WORKDIR /app
-EXPOSE 5000
-
 COPY --from=build-env /app/out ./
 ENTRYPOINT ["dotnet", "GiraffeSample.dll"]
